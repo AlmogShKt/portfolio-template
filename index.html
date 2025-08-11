@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CS Portfolio Template</title>
+    <meta
+      name="description"
+      content="A clean, responsive portfolio template for CS students and grads."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container" style="position: relative">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          🌗
+        </button>
+        <h1 id="name">Your Name</h1>
+        <h2 id="title">Computer Science Graduate</h2>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero" id="top">
+        <img
+          id="avatar"
+          src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop offset='0%' stop-color='%232563EB'/><stop offset='100%' stop-color='%2306B6D4'/></linearGradient></defs><rect width='120' height='120' rx='60' fill='url(%23g)'/><circle cx='60' cy='46' r='20' fill='%23fff' opacity='.9'/><rect x='24' y='74' width='72' height='30' rx='15' fill='%23fff' opacity='.9'/></svg>"
+          alt="Profile photo"
+        />
+        <div>
+          <p id="about-text" class="about">
+            Passionate CS student focused on full‑stack development and AI. I
+            love building useful, accessible products.
+          </p>
+          <div class="cta">
+            <a
+              id="resumeLink"
+              class="btn"
+              href="#"
+              target="_blank"
+              rel="noopener"
+              >View Resume</a
+            >
+            <a id="emailLink" class="btn secondary" href="#">Email Me</a>
+          </div>
+          <ul class="social-icons" id="socialLinks"></ul>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h3>Skills</h3>
+        <ul class="chips" id="skillsList"></ul>
+      </section>
+
+      <section id="projects" class="project-section">
+        <h3>Projects</h3>
+        <div id="project-list"></div>
+      </section>
+
+      <section id="experience">
+        <h3>Experience</h3>
+        <div class="stack" id="experienceList"></div>
+      </section>
+
+      <section id="education">
+        <h3>Education</h3>
+        <div class="stack" id="educationList"></div>
+      </section>
+
+      <section id="contact">
+        <h3>Contact</h3>
+        <p>
+          Email:
+          <a id="email" href="mailto:your.email@example.com"
+            >your.email@example.com</a
+          >
+        </p>
+        <p>
+          LinkedIn:
+          <a href="#" id="linkedin" target="_blank" rel="noopener"
+            >Your LinkedIn Profile</a
+          >
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <small
+          >© <span id="year"></span>
+          <span id="footerName">Your Name</span></small
+        >
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
