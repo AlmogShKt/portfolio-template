@@ -117,6 +117,7 @@ const portfolioData = {
 
   contact: {
     email: "alex.johnson@example.com",
+    phone: "+1 (555) 123-4567", // optional - leave empty to hide
     linkedin: "https://www.linkedin.com/in/alex-johnson/",
     github: "https://github.com/alex-johnson",
   },

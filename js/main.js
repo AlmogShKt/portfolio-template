@@ -41,6 +41,15 @@ function renderHero() {
   if (data.contact?.email) emailBtn.href = `mailto:${data.contact.email}`;
   else emailBtn.style.display = "none";
 
+  const phoneBtn = $("#phoneLink");
+  if (data.contact?.phone && data.contact.phone.trim() !== "") {
+    const telHref = `tel:${data.contact.phone.replace(/[^\d+]/g, '')}`;
+    phoneBtn.href = telHref;
+    phoneBtn.style.display = "inline-block";
+  } else {
+    phoneBtn.style.display = "none";
+  }
+
   const resumeBtn = $("#resumeLink");
   if (data.resumeUrl) {
     resumeBtn.href = safeHref(data.resumeUrl);
@@ -226,11 +235,25 @@ function renderContactFooter() {
   const year = new Date().getFullYear();
   $("#year").textContent = String(year);
   $("#footerName").textContent = data.name || "";
+  
   const email = $("#email");
   if (data.contact?.email) {
     email.textContent = data.contact.email;
     email.href = `mailto:${data.contact.email}`;
   }
+  
+  const phone = $("#phone");
+  const phoneSection = $("#phoneSection");
+  if (data.contact?.phone && data.contact.phone.trim() !== "") {
+    phone.textContent = data.contact.phone;
+    // Create tel: link by removing non-numeric characters except +
+    const telHref = `tel:${data.contact.phone.replace(/[^\d+]/g, '')}`;
+    phone.href = telHref;
+    phoneSection.style.display = "block";
+  } else {
+    phoneSection.style.display = "none";
+  }
+  
   const linked = $("#linkedin");
   if (data.contact?.linkedin) linked.href = safeHref(data.contact.linkedin);
 }
